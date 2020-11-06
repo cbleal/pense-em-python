@@ -7,5 +7,5 @@ R. 523.58
 '''
 
 r = 5
-volume = (4/3) * 3.1415 * r ** 3
+volume = 4/3 * 3.1415 * r ** 3
 print(f'O volume é {volume:.2f}')

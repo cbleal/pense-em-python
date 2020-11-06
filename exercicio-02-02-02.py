@@ -9,9 +9,10 @@ R. 945.45
 
 '''
 
-custo_livro = 24.95 * 0.60
+custo_livro = 24.95
+livro_desconto = custo_livro - (custo_livro * (40 / 100))
 qtde_compra = 60
 valor_trans = 3.00 + ((qtde_compra - 1) * 0.75)
-total_compra = custo_livro * 60 + valor_trans
+total_compra = livro_desconto * qtde_compra + valor_trans
 
 print(f'Total da compra foi R${total_compra:.2f}')

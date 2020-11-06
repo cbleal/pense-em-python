@@ -9,13 +9,16 @@
 
 # transforma tudo para segundos
 inicio = (6 * 3600) + (52 * 60)
-corrida = ((8 * 60 + 15) * 2) + ((7 * 60 + 12) *3)
+passo_lento = (8 * 60 + 15) * 2
+passo_rapido = (7 * 60 + 12) * 3
+corrida = passo_lento + passo_rapido
+
 # soma dos dois momentos
 chegada = inicio + corrida
-# converte o total de segundos para h, m, s
-hora = chegada // 3600
-segundos = chegada % 3600
-minuto = segundos // 60
-segundo = segundos % 60
 
-print(f'Hora de chegada: {hora:0>2d}:{minuto:0>2}:{segundo:0>2d}')
+# converte o total de segundos para h, m, s
+horas = chegada // 3600
+minutos = (chegada % 3600) // 60
+segundos = (chegada % 3600) % 60
+
+print(f'Hora de chegada: {horas:0>2d}:{minutos:0>2}:{segundos:0>2d}')
